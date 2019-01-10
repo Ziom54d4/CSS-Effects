@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+    <title>Crazy CSS Effects</title>
+    <link href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet/less" type="text/css" href="style.less">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="container-loader">
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div class="container-section">
+        <div class="section"></div>
+        <div class="section"></div>
+    </div>
+
+    <div class="container-button" id="con-but">
+        <div id="but" onmouseover="change()" onmouseout="changea()"><span class="button">believe</span></div>
+    </div>
+
+    <div class="container-icon">
+        <ul>
+            <li>
+                <label>
+                    <input type="checkbox" name="">
+                    <i class="fas fa-wifi"></i>
+                    <span class="check" onclick="sound()"></span>
+                </label>
+            </li>
+
+            <li>
+                <label>
+                    <input type="checkbox" name="">
+                    <i class="fas fa-lightbulb"></i>
+                    <span class="check" onclick="sound()"></span>
+                </label>
+            </li>
+
+            <li>
+                <label>
+                    <input type="checkbox" name="">
+                    <i class="fas fa-volume-up"></i>
+                    <span class="check" onclick="sound()"></span>
+                </label>
+            </li>
+
+            <li>
+                <label>
+                    <input type="checkbox" name="">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="check" onclick="sound()"></span>
+                </label>
+            </li>
+        </ul>
+    </div>
+
+    <script src="java.js"></script>
+</body>
+
+</html>

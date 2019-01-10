@@ -1,0 +1,260 @@
+@bc-b: #003300;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: @bc-b;
+}
+
+body::-webkit-scrollbar {
+    width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 125, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: salmon;
+    border-radius: 20px;
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.9);
+    outline: 1px solid slategrey;
+}
+
+body::-webkit-scrollbar-button {
+    background-color: olivedrab;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 255, 0.3);
+}
+
+.container-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('soft_kill.png');
+}
+
+.loader {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background-image: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    animation: animate 0.5s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader span {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-image: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+}
+
+.loader span:nth-child(1) {
+    filter: blur(5px);
+}
+
+.loader span:nth-child(2) {
+    filter: blur(10px);
+}
+
+.loader span:nth-child(3) {
+    filter: blur(25px);
+}
+
+.loader span:nth-child(4) {
+    filter: blur(50px);
+}
+
+.loader:after {
+    content: '';
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    bottom: 40px;
+    left: 40px;
+    background-color: #303030;
+    border-radius: 50%;
+}
+
+.container-section {
+    width: 100%;
+    position: relative;
+
+    .section {
+        top: 0;
+        position: sticky;
+        width: 100%;
+        height: 100vh;
+        background-color: #000;
+    }
+}
+
+.section:nth-child(1) {
+    background-size: cover;
+    background-image: url(fantasy-2861107_1920.jpg);
+}
+
+.section:nth-child(2) {
+    background-size: cover;
+    background-image: url(fire-and-water-2354583_1920.jpg);
+}
+
+.container-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('congruent_outline.png');
+}
+
+#but {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    background-color: #3f3f3f;
+    padding: 35px 60px 35px 60px;
+    border-radius: 5px;
+    transform: skewX(-15deg);
+    font-size: 45px;
+    font-family: 'Averia Serif Libre', cursive;
+    color: antiquewhite;
+    border: 6px solid silver;
+}
+
+#but:hover {
+    background-color: darkslategray;
+}
+
+#but::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    background-color: silver;
+    transition: .5s;
+}
+
+#but:hover::before {
+    left: 100%;
+    transform: translate(-100%);
+}
+
+.button {
+    display: block;
+    transform: skew(15deg);
+}
+
+.container-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('mochaGrunge.png');
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+ul li {
+    position: relative;
+    list-style: none;
+    width: 150px;
+    text-align: center;
+}
+
+ul li label {
+    position: relative;
+}
+
+ul li label i,
+ul li label input[type="checkbox"] {
+    display: block;
+    text-align: center;
+}
+
+ul li label i {
+    font-size: 20px;
+    color: #666;
+    transition: 0.5s;
+    margin-bottom: 10px;
+}
+
+ul li label input[type="checkbox"] {
+    display: none;
+}
+
+ul li label .check {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(#666, #444);
+    border-radius: 50%;
+    margin: 10px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+ul li label .check:before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #333;
+    transition: 0.5s;
+    z-index: 3;
+}
+
+ul li label .check:after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background-color: #444;
+    border-radius: 50%;
+    z-index: 2;
+    border: 2px solid #606060;
+}
+
+ul li label input[type="checkbox"]:checked ~ .check:before {
+    background-color: rgba(0, 176, 255, 1);
+    box-shadow: 0 0 10px rgba(0, 176, 255, 1),
+        0 0 15px rgba(0, 176, 255, 1),
+        0 0 20px rgba(0, 176, 255, 1),
+        0 0 25px rgba(0, 176, 255, 1),
+        0 0 0 2px rgba(0, 176, 255, .1);
+}
+
+ul li label input[type="checkbox"]:checked ~ i {
+    color: rgba(0, 176, 255, 1);
+}
